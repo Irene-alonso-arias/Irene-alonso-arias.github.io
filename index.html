@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/styles.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('sobre-mi')">Sobre mí</a></li>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('proyectos')">Proyectos</a></li>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  
+    <section id="inicio" class="seccion active">
+      <div style="background-image: url('https://i.pinimg.com/736x/b9/b7/52/b9b752e55d6cdd995e4fb7ba147e9213.jpg'); 
+                  background-size: cover; 
+                  background-position: center; 
+                  background-attachment: fixed;
+                  height: 100vh; /* Asegura que la imagen ocupe toda la altura de la ventana */
+                  width: 100%; /* Asegura que la imagen cubra todo el ancho de la ventana */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;">
+        <div style="text-align: center; color: white;">
+          <h1 class="titulo-animado">Bienvenido a mi Portfolio</h1>
+          <p class="subtitulo-animado">Irene Alonso Arias</p>
+        </div>
+      </div>
+    </section>
+    <section id="sobre-mi" class="seccion">
+      <h2>Sobre mí</h2>
+      <p>Conoce más sobre mi trayectoria, mis intereses y mis habilidades.</p>
+      <div class="imagen-sobre-mi">
+        <img src="C:\Users\Irene\Desktop\PORTFOLIO PAG WEB\assets\photo-output.jpg" alt="Foto sobre mí">
+      </div>
+      <div class="texto-sobre-mi">
+        <p>Hola, mi nombre es Irene Alonso y soy estuadiante de 4 año de carrera de diseño de producto. Me caracterizo por ser una persona con gran capacidad organizativa, facilidad para trabajar en equipo, flexible y con capacidad de adaptación. Además al estudiar diseño, tengo una muy buena atención al detalle y habilidades creativas y artísticas.
+
+          Dentro de mis intereses se podrían destacar el gusto por la moda, cosmética y estética, la sostenibilidad e innovación.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="proyectos" class="seccion">
+      <h2>Mis Proyectos</h2>
+      <p>Explora algunos de mis trabajos más destacados y descubre mis habilidades en acción.</p>
+      <div class="proyectos">
+        <div class="proyecto" onclick="verProyecto(1)">
+          <img src="C:\Users\Irene\Desktop\PORTFOLIO PAG WEB\assets\Image 1.png" alt="Proyecto 1">
+        </div>
+        <div class="proyecto" onclick="verProyecto(2)">
+          <img src="C:\Users\Irene\Desktop\PORTFOLIO PAG WEB\assets\byn.png" alt="Proyecto 2">
+        </div>
+        <div class="proyecto" onclick="verProyecto(3)">
+          <img src="C:\Users\Irene\Desktop\PORTFOLIO PAG WEB\assets\IMG_1057.PNG">
+        </div>
+      </div>
+    </section>
+
+    <section id="detalle-proyecto" class="seccion" style="display: none;">
+      
+      <img id="detalle-imagen"  />
+      <h3 id="detalle-titulo"></h3>
+      <p id="detalle-descripcion"></p>
+      
+      <div id="detalle-content" class="detalle-content-div">
+      </div>
+      <a href="javascript:void(0);" onclick="mostrarSeccion('proyectos')" class="volver">Volver a Proyectos</a>
+    </section>
+
+   
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <p>¡No dudes en ponerte en contacto conmigo!</p>
+      <form class="form-contacto">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Portfolio. Tlf: +34618367626 / email: irene.alonso.arias@gmail.com</p>
+  </footer>
+
+  <script src="./JS/scripts.js"></script>
+</body>
+</html>
